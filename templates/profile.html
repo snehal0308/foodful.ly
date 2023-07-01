@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+{% block title %}
+Store proflile
+{% endblock %}
+{% block main %}
+
+
+<style>
+    img {
+      border: 1px solid #ddd; /* Gray border */
+      border-radius: 4px;  /* Rounded border */
+      padding: 5px; /* Some padding */
+      width: 200px; /* Set a small width */
+      float: right;
+    }
+    
+    /* Add a hover effect (blue shadow) */
+    img:hover {
+      box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    
+    </style>
+    <body>
+
+    
+    </body>
+</div>
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"><br/>
+
+
+    <h1 class="display-4 fw-normal" style="color:#F9F3EE"><b><big>Store details</big></h1></br/></br/></br/>
+
+
+        
+    <form method>
+    
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <img src="static/grocery.jpg" class="img-thumbnail" alt="...">
+    <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input type="contact" class="form-control" id="contact" placeholder="+91 9123456890">
+      </div>
+      <div class="mb-3">
+        <label for="storename" class="form-label">Store name</label>
+        <textarea class="form-control" id="storename" rows="1" placeholder="Greenberry Store"></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="location" class="form-label">Location</label>location</label>
+        <textarea class="form-control" id="location" rows="1" placeholder="T. P.S. Road & III Link Road, Vazira, Borivali, West Mumbai, Maharashtra, 400092"></textarea>
+      </div><br/>
+
+
+      
+      <button class="btn btn-light" type="submit" value="both" name="selling">Both</button></br/>
+  
+      
+         </form>
+
+     <div>
+
+        <label class="food" style="color:#F9F3EE"> Product Images</p>
+        <img src="static/gr2.jpg" class="gr1">
+    </div>
+
+    <div style="margin-top: 50px;" class="ui container">
+      <h1 class="ui center aligned header" style="color:#F9F3EE">Available Products</h1>
+
+
+
+
+      <hr>
+            {% for product in product_list %}
+      <div class="ui segment">
+
+          <p class="ui big header" style="color:#F9F3EE">{{product.id }} | {{ product.title }} | {{product.original_price}} | {{product.discounted_price}} | {{ product.quantity }}</p>
+
+
+      </div>
+
+      {% endfor %}
+  </div>
+
+     
+
+</div>
+</br/></br/></br/></br/></br/>
+
+
+
+
+{% endblock %}
